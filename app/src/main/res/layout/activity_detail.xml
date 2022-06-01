@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#542F"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:outlineAmbientShadowColor="#000000"
+            android:outlineSpotShadowColor="#000000"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txt_Map_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="@string/map"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayoutMap"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutMap" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutDesc"
+                android:layout_width="382dp"
+                android:layout_height="216dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayoutMap"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/txt_Detail_Description"
+                    android:layout_width="375dp"
+                    android:layout_height="216dp"
+                    android:layout_gravity="center_horizontal"
+                    android:autoSizeMaxTextSize="75dp"
+                    android:autoSizeMinTextSize="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/product_sans_italic"
+                    android:gravity="center_horizontal"
+                    android:text="@string/descriptiontext"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rb_Detail_Rating">
+
+                <ImageView
+                    android:id="@+id/iv_Image"
+                    android:layout_width="380dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:srcCompat="@drawable/acropolis_map02" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutMap"
+                android:layout_width="382dp"
+                android:layout_height="216dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDesc"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutDesc"
+                tools:layout_editor_absoluteY="625dp">
+
+                <ImageView
+                    android:id="@+id/iv_Map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/acropolis_map01" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_Flag"
+                android:layout_width="81dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_Detail_Title"
+                app:layout_constraintTop_toTopOf="@+id/txt_Detail_Title" />
+
+            <RatingBar
+                android:id="@+id/rb_Detail_Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:isIndicator="true"
+                app:layout_constraintEnd_toEndOf="@+id/txt_Detail_Title"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/iv_Flag"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Detail_Title" />
+
+            <TextView
+                android:id="@+id/txt_Detail_TimeZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timezone"
+                app:layout_constraintEnd_toEndOf="@+id/txt_Detail_Local_Current_Time"
+                app:layout_constraintStart_toStartOf="@+id/txt_Detail_Local_Current_Time"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Detail_Local_Current_Time" />
+
+            <TextView
+                android:id="@+id/txt_Detail_Local_Current_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/local_time"
+                app:layout_constraintStart_toStartOf="@+id/txt_Timezone_Label"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Timezone_Label" />
+
+            <TextView
+                android:id="@+id/txt_Timezone_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/localtime"
+                app:layout_constraintStart_toStartOf="@+id/iv_Flag"
+                app:layout_constraintTop_toTopOf="@+id/rb_Detail_Rating" />
+
+            <TextView
+                android:id="@+id/txt_Detail_Title"
+                android:layout_width="269dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="20dp"
+                android:autoSizeMaxTextSize="75dp"
+                android:autoSizeMinTextSize="30dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/product_sans_regular"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="#000000"
+                android:shadowColor="#000000"
+                android:text="@string/name"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.887"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_Favourite"
+                android:layout_width="49dp"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/favourite_red" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>

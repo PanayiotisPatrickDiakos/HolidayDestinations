@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">3634Travel</string>
+    <string name="top10">Top 10 Destinations</string>
+    <string name="favourites">Favourites</string>
+    <string name="localtime">Local Time:</string>
+    <string name="app_slogan">Your one stop for the top rated holiday destinations in the world!</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="sort_country">Country</string>
+    <string name="sort_rating">Rating</string>
+    <string name="sort_time">Time</string>
+    <string name="sort_title">Name</string>
+    <string name="map">Map:</string>
+    <string name="descriptiontext">DescriptionText</string>
+    <string name="timezone">Timezone</string>
+    <string name="local_time">Local Time</string>
+    <string name="name">Name</string>
+</resources>
